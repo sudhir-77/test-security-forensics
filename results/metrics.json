@@ -1,0 +1,122 @@
+{
+  "project": "test-security-forensics",
+  "success_criteria": [
+    {
+      "name": "Detection power (recall) for answer copying at 1% false-positive rate",
+      "value": 1.0,
+      "op": ">=",
+      "threshold": 0.8,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Detection power for item preknowledge at 1% FPR",
+      "value": 0.955,
+      "op": ">=",
+      "threshold": 0.6,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "False-positive control (observed FPR within 0.5 percentage points of 1%)",
+      "value": 0.01108108108108108,
+      "op": "between",
+      "threshold": 0.005,
+      "threshold_high": 0.015,
+      "passed": true
+    },
+    {
+      "name": "combined model AUC at least 0.10 higher than a raw-score z-score baseline",
+      "value": 0.3750698198198198,
+      "op": ">=",
+      "threshold": 0.1,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Test coverage",
+      "value": 0.943,
+      "op": ">=",
+      "threshold": 0.75,
+      "threshold_high": null,
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "power_copy_fpr01": 1.0,
+    "power_preknowledge_fpr01": 0.955,
+    "power_rapidguess_fpr01": 1.0,
+    "power_copy_fpr001": 1.0,
+    "power_preknowledge_fpr001": 0.905,
+    "power_rapidguess_fpr001": 1.0,
+    "observed_fpr": 0.01108108108108108,
+    "auc_combined": 0.9994524774774775,
+    "auc_baseline": 0.6243826576576577,
+    "threshold_fpr01": 2.652289608289285,
+    "threshold_fpr001": 3.5014226569587095,
+    "calibration_val_fpr": 0.01,
+    "n_evaluation": 8000,
+    "n_evaluation_clean": 7400,
+    "n_copy": 200,
+    "n_preknowledge": 200,
+    "n_rapid_guess": 200,
+    "misconduct_rate_full_sample": 0.03,
+    "data_quality_incomplete_candidates": 0,
+    "calibration_a_correlation": 0.9474207335599096,
+    "calibration_b_correlation": 0.9945718903173768,
+    "response_rows": 3000000,
+    "response_checksum_sha256": "914e247e3d94c6fa2230aefe66d067858cea80193b3d781302b6ed2c49490ca8",
+    "auc_lift": 0.3750698198198198,
+    "auc_copy_vs_clean": 1.0,
+    "auc_preknowledge_vs_clean": 0.9983574324324325,
+    "auc_rapidguess_vs_clean": 1.0,
+    "resume_figures": {
+      "copy_recall_percent": 100.0,
+      "preknowledge_recall_percent": 95.5,
+      "rapid_guess_recall_percent": 100.0,
+      "auc_combined": 0.999,
+      "auc_baseline": 0.624,
+      "n_evaluation": 8000,
+      "observed_fpr_percent": 1.11
+    },
+    "requested_device": "cpu",
+    "pipeline_runtime_seconds": 13.732136499980697,
+    "test_coverage": 0.943
+  },
+  "baseline": {
+    "auc_baseline": 0.6243826576576577,
+    "power_copy_at_z_gt_2": 0.0,
+    "power_preknowledge_at_z_gt_2": 0.025,
+    "power_rapidguess_at_z_gt_2": 0.0,
+    "observed_fpr_at_z_gt_2": 0.011486486486486487
+  },
+  "splits": {
+    "exam": {
+      "train": 6000,
+      "val": 6000,
+      "test": 8000
+    }
+  },
+  "seeds": [
+    20260111,
+    20260315,
+    20260901,
+    20260501,
+    20260707
+  ],
+  "hardware": {
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "ram_gb": 15.73,
+    "gpu": null,
+    "python": "3.12.10",
+    "os": "Windows-11-10.0.26300-SP0",
+    "peak_rss_gb": 0.4519
+  },
+  "runtime_seconds": 25.351,
+  "power_copy_fpr01": 1.0,
+  "power_preknowledge_fpr01": 0.955,
+  "power_rapidguess_fpr01": 1.0,
+  "observed_fpr": 0.01108108108108108,
+  "auc_combined": 0.9994524774774775,
+  "auc_baseline": 0.6243826576576577
+}
